@@ -1,0 +1,503 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* --------------------------------fonts-------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap  ");
+/* --------------------------------fonts-------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* My styles */
+
+:root{
+    --primary: #f9234d;
+    --text-clr: #6e6d73;
+    --black-clr: #272727;
+    --bgc: #dfecff;
+}
+
+*, 
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    line-height: 1.5;
+    color: var(--text-clr);
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-evenly{
+    justify-content: space-evenly;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.flex-80{
+    flex: 0 1 80%;
+}
+
+.flex-75{
+    flex: 0 1 75%;
+}
+
+.flex-55{
+    flex: 0 1 55%;
+}
+
+.flex-45{
+    flex: 0 1 45%;
+}
+
+.flex-30{
+    flex: 0 1 30%;
+}
+
+.flex-25{
+    flex: 0 1 25%;
+}
+
+.flex-15{
+    flex: 0 1 15%;
+}
+
+.flex-15{
+    flex: 0 1 15%;
+}
+.flex-dir-col{
+    flex-direction: column;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.padding{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.square-btn{
+    display: inline-block;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.2rem;
+    padding: 0.5rem 1.2rem;
+}
+
+.highlight{
+    color: var(--primary);
+}
+
+
+
+
+/* Header */
+.header{
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+.brand h1{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.navbar li a{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+
+.join-btn{
+    padding: 0.4rem 2rem;
+    margin-left: 2rem;
+}
+
+
+/* Hero */
+.banner {
+    background: linear-gradient(rgba(0,0,255, 0.5), rgba(0,0,255, 0.5)), url("./assets/banner.png"); 
+    height: 100vh;
+    width: 100%;
+    background-size:cover;
+    object-fit: cover;
+}
+
+.banner-img img{
+    width: 100%;
+}
+
+
+.content h2{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    width: 50%;
+}
+
+.content p{
+    color: #fff;
+    font-family: "Nunito";
+}
+
+.content .register-btn{
+    margin-top: 1rem;
+}
+
+/* About */
+
+.about-content h2{
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #272727;
+}
+
+.about-content p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+
+/* why join */
+
+.join{
+    background-color: var(--bgc);
+    line-height: 1.3;
+}
+
+ .heading{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--black-clr);
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+
+}
+/* 
+.all-reasons{
+    margin: 4rem 0;
+} */
+
+.reason{
+    border: 1.8px dashed var(--primary);
+    /* width: 30%; */
+    position: relative;
+    padding: 1.2rem;
+    display: inline-block;
+}
+
+.reason-number{
+    position: absolute;
+    left: 15px;
+    top: -18px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 .3em;
+    color: var(--primary);
+    background: #dfecff;
+}
+
+.reason h2{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #272727;
+    margin: 0.2rem 0;
+    text-transform: capitalize;
+}
+
+.reason p{
+    font-weight: 600;
+}
+
+
+/* schedule  */
+
+/* timeline */
+
+ .timeline-block{
+    position: relative;
+    top: -530px;
+}
+
+.middle-line{
+    width: 5px;
+    margin-left: 60px;
+    height: 520px;
+    color: var(--black-clr);
+    border-left: 2px dashed red;
+}
+
+.date{
+    position: relative;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    border: 1px dashed var(--primary);
+    background-color: var(--primary);
+    padding: 0.5rem;
+
+}
+
+.date p{
+    /* margin-bottom: 0.1rem; */
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.timeline-block .article-img img{
+    border-radius: 0.4rem;
+}
+
+.timeline-block .article-content h2{
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--black-clr);
+}
+
+.timeline-block .article-content p{
+    font-weight: 600;
+}
+.schedule-item{
+    position: relative;
+    left: -53px;
+}
+
+.timeline-block ul li {
+    margin-bottom: 50px;
+}
+.hollow{
+    background-color: #fff;
+    border: 2px dashed var(--primary);
+}
+
+.hollow p{
+    color: var(--primary);
+}
+
+/* Highlights */
+.border{
+    border: 1px solid red;
+
+}
+.highlights{
+    background-color: var(--bgc);
+}
+
+.highlight-img{
+    object-fit: cover;
+    padding: 1rem 0;
+    border-radius: 0.3rem;
+}
+
+.hightlight-count{
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0.7rem 0;
+    color: var(--black-clr);
+}
+
+.hightlight-name{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black-clr);
+    text-transform: capitalize;
+}
+
+.highlights .active{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.highlights .active h3, .highlights .active p {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+
+/* video */
+
+.video-thumbnail{
+    background-image: url("./assets/banner.png");
+    width: 100%;
+    height: 500px;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+.play-btn{
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.play-btn .fa-play{
+    color: var(--primary);
+}
+
+
+/* news */
+.news{
+    background-color: var(--bgc);
+}
+
+.news .article-content h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black-clr);
+    margin-bottom: 0.5rem;
+}
+
+.news .article-content .read-more-btn{
+    text-decoration: underline;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-top: 0.8rem;
+}
+
+.news .article-content .active{
+    text-decoration: underline;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: var(--primary);
+}
+
+
+
+/* footer */
+
+/* footer top */
+.footer-top{
+    background-color: #23347b;
+}
+
+.footer-links h3, .sm-links h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-nav a{
+    color: var(--text-clr);
+    font-weight: 600;
+}
+
+.sm-links{
+    margin-left: 4rem;
+}
+
+.sm-links a{
+    margin-right: 2rem;
+    color: #bcc0d2;
+}
+
+.footer-bottom{
+    background-color: #102169;
+    padding: 1.5rem;
+    font-weight: 600;
+}
